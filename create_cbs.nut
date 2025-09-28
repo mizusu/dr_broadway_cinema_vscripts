@@ -609,11 +609,21 @@ function PreCacheSounds()
     // sounds should be precached once before use
     PrecacheScriptSound("Game.Domination");
     PrecacheScriptSound("skullgirls/cbs_theme.mp3");
+
+    PrecacheScriptSound("vo/sniper_paincriticaldeath01.mp3");
+    PrecacheScriptSound("vo/sniper_paincriticaldeath02.mp3");
+    PrecacheScriptSound("vo/sniper_paincriticaldeath03.mp3");
+    PrecacheScriptSound("vo/sniper_paincriticaldeath04.mp3");
+
+    PrecacheScriptSound("vo/sniper_painsevere01.mp3");
+    PrecacheScriptSound("vo/sniper_painsevere02.mp3");
+    PrecacheScriptSound("vo/sniper_painsevere03.mp3");
+    PrecacheScriptSound("vo/sniper_painsevere04.mp3");
 }
 
-function StopTheme()
+function StopCBSTheme()
 {
-    printl("StopTheme called")
+    printl("StopCBSTheme called")
     ::SND_NOFLAGS <- 0
     ::SND_CHANGE_VOL <- 1
     ::SND_CHANGE_PITCH <- 2
@@ -643,7 +653,21 @@ function StopTheme()
         filter_type = Constants.EScriptRecipientFilter.RECIPIENT_FILTER_GLOBAL,
         flags = SND_STOP
     });
+}
 
+function PlayCBSDeathSound()
+{
+    local rand = (rand() % 4) + 1;
+    local deathSoundRoute = "vo/sniper_paincriticaldeath0" + rand + ".mp3";
+    printl("PlayCBSDeathSound called + ")
+
+    // play the sound to everyone around yourself
+    EmitSoundEx({
+        sound_name = deathSoundRoute,
+        sound_level = 0, // Value of 0 will make it play globally
+        origin = GetListenServerHost().GetCenter(),
+        filter_type = Constants.EScriptRecipientFilter.RECIPIENT_FILTER_GLOBAL
+    });
 }
 
 // event listener (see Listening for Events example)
@@ -682,6 +706,8 @@ CollectEventsInScope
 			{
 				// Run the bot's OnKilled function
 				scope.bot_brain.OnKilled()
+                StopCBSTheme()
+                PlayCBSDeathSound()
 			}
 		}
 	}
@@ -689,7 +715,7 @@ CollectEventsInScope
     function OnGameEvent_scorestats_accumulated_update(params)
 	{
         printl("Round ended, stopping CBS theme music")
-        StopTheme()
+        StopCBSTheme()
 	}
 
 })
