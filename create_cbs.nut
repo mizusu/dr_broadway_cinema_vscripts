@@ -523,6 +523,14 @@ function spawnCBS() {
                 origin = GetListenServerHost().GetCenter(),
                 filter_type = Constants.EScriptRecipientFilter.RECIPIENT_FILTER_GLOBAL
             });
+
+            // play again to increase volume
+            EmitSoundEx({
+                sound_name = "skullgirls/cbs_theme.mp3",
+                sound_level = 0, // Value of 0 will make it play globally
+                origin = GetListenServerHost().GetCenter(),
+                filter_type = Constants.EScriptRecipientFilter.RECIPIENT_FILTER_GLOBAL
+            });
         }
 
         bot = null						// The bot entity we belong to
@@ -619,7 +627,7 @@ function StopTheme()
     ::SND_IGNORE_NAME <- 512
     ::SND_DO_NOT_OVERWRITE_EXISTING_ON_CHANNEL <- 1024
 
-    // play the sound to everyone around yourself
+    // same as playing a sound, but with the SND_STOP flag which stops the sound
     EmitSoundEx({
         sound_name = "skullgirls/cbs_theme.mp3",
         sound_level = 0, // Value of 0 will make it play globally
@@ -627,6 +635,15 @@ function StopTheme()
         filter_type = Constants.EScriptRecipientFilter.RECIPIENT_FILTER_GLOBAL,
         flags = SND_STOP
     });
+    // doing it again because we initially played the sound twice to increase volume
+    EmitSoundEx({
+        sound_name = "skullgirls/cbs_theme.mp3",
+        sound_level = 0, // Value of 0 will make it play globally
+        origin = GetListenServerHost().GetCenter(),
+        filter_type = Constants.EScriptRecipientFilter.RECIPIENT_FILTER_GLOBAL,
+        flags = SND_STOP
+    });
+
 }
 
 // event listener (see Listening for Events example)
