@@ -24,6 +24,11 @@ function CollectEventsInScope(events)
 	__CollectGameEventCallbacks(events)
 }
 
+// In your map’s initialization or top of script
+MyCBS <- { isAggressive = false };
+::isAggressive <- false;
+::makeCBSIdle <- false;
+
 function spawnCBS() {
     const FLT_MAX = 3.402823466e+38
     const MASK_SOLID = 33570827
@@ -99,6 +104,8 @@ function spawnCBS() {
     // The big boy that handles all our behavior
     class ::Bot
     {
+        attack_cooldown_time = 2.0
+        last_attack_time = 0.0
         constructor(spawn_origin, target = null)
         {
             bot = SpawnEntityFromTable("base_boss",
@@ -162,8 +169,13 @@ function spawnCBS() {
             seq_idle = bot.LookupSequence("Stand_MELEE")
             seq_run = bot.LookupSequence("Run_MELEE")
             pose_move_x = bot.LookupPoseParameter("move_x")
+            pose_move_y = bot.LookupPoseParameter("move_y")
+            pose_move_yaw = bot.LookupPoseParameter("move_yaw")
 
             debug = true
+
+            // MyCBS.isAggressive = true
+            ::isAggressive = true
         }
 
         function SetDestination(target)
@@ -470,7 +482,11 @@ function spawnCBS() {
 
                 // If the bot is standing still, look at the target instead of the path points
                 if (path_follow_ent && path_follow_ent.IsValid())
+                {
                     SetDirection(path_follow_ent.GetOrigin())
+                    if (::isAggressive == true)
+                        DoMeleeAttack()
+                }
             }
 
             // Rotating the bot
@@ -504,6 +520,54 @@ function spawnCBS() {
             AddThinkToEnt(bot, null)
 
             // Custom death behavior can be added here
+        }
+
+        function DoMeleeAttack()
+        {
+            // local attack_activity = bot.LookupActivity("ACT_MP_ATTACK_STAND_MELEE")
+            // local attack_sequence = bot.GetSequenceActivityName(attack_activity)
+
+            // printl("melee attack activity: " + attack_activity + " sequence: " + attack_sequence)
+
+            // Play melee animation
+            // local melee_attack_sequence = bot.LookupSequence("Melee_Swing")
+            // bot.SetSequence(melee_attack_sequence)
+
+            // bot.SetPoseParameter(pose_move_y, 290.0)
+
+            local bot_position = bot.GetOrigin()
+            local radius = 400.0;
+            local previous = null
+            local entity = Entities.FindInSphere(previous, bot_position, radius)
+            printl(entity)
+
+            local current_time = Time(); // Time() returns seconds since game start
+
+            while (entity != null && ::isAggressive == true && ::makeCBSIdle == false){
+                if (::makeCBSIdle == true) {
+                    printl("makeCBSIdle:" + ::makeCBSIdle)
+                    return
+                }
+                if (::makeCBSIdle == true) {
+                    printl("makeCBSIdle:" + ::makeCBSIdle)
+                    break
+                }
+
+                if (entity.IsPlayer() && entity.IsAlive()) {
+                    printl("Found player in range: " + entity.GetName())
+                    if (current_time - last_attack_time >= attack_cooldown_time) {
+                        entity.TakeDamage(50, 4, bot)
+                        last_attack_time = current_time
+                    }
+                }
+                // Update previous handle for the next iteration
+                previous = entity
+                entity = Entities.FindInSphere(previous, bot_position, radius)
+            }
+            // printl("makeCBSIdle:" + ::makeCBSIdle)
+            // printl("current_time:" + current_time)
+            // printl("last_attack_time:" + last_attack_time)
+            // printl("attack_cooldown_time:" + attack_cooldown_time)
         }
 
         function PlayTheme()
@@ -567,6 +631,8 @@ function spawnCBS() {
         seq_idle = null					// Animation to use when idle
         seq_run = null					// Animation to use when running
         pose_move_x = null				// Pose parameter to set for running animation
+        pose_move_y = null				// Exists in bot.LookupPoseParameter("move_y") with return value of 5
+        pose_move_yaw = null			// Does not exist in bot.LookupPoseParameter("move_y")
 
         damage_force = null				// Damage force from the bot's last OnTakeDamage event
 
@@ -716,6 +782,14 @@ CollectEventsInScope
 	{
         printl("Round ended, stopping CBS theme music")
         StopCBSTheme()
+	}
+
+        function OnGameEvent_player_death(params)
+	{
+        printl("player_death event")
+        printl(params)
+        ::isAggressive = false
+        ::makeCBSIdle = true
 	}
 
 })
