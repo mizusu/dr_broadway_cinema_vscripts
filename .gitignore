@@ -1,0 +1,12 @@
+# Compiled / generated map files
+*.bsp
+*.prt
+*.lin
+*.log
+
+# Hammer autosaves and manual backups (git history replaces these)
+*.vmx
+*.bak_*.vmf
+
+# OS
+.DS_Store

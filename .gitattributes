@@ -1,0 +1,3 @@
+# Hammer files use CRLF; store them byte-for-byte, no line-ending conversion
+*.vmf -text diff
+*.vmx -text diff
