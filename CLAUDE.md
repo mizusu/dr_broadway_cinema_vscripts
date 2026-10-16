@@ -30,13 +30,15 @@ The owner dislikes working in Hammer. Do as much as possible by editing the .vmf
 Heights (z) and areas were measured from the .vmf. Ones marked "(guess)" haven't been confirmed by the owner.
 
 1. **Spawn outside**, at ground level on the north side (z ≈ 0, `info_player_teamspawn` at 192 1536 16).
-2. **Enter the cinema** into a hallway, then **pass through theater 1** (the west wing, with sunken stepped floors at z 320–770). The `theater1_trigger_push` triggers are here: 8 always-on pushes at speed 1000.
+2. **Enter the cinema** into a hallway, then **pass through theater 1** (the west wing, with sunken stepped floors at z 320–770). The 8 `theater1_trigger_push` triggers here are **leftover test entities** for a future trap: BLU triggers it and RED players get pushed into an inescapable theater where they die. They're currently always on (speed 1000) and block the route, so the owner has to noclip through them.
 3. **Go up to the second floor.** Another fully built theater here is a **trap room (not made yet)**: a trap is meant to push players into it, where they die. Location (guess): the floors at z ≈ 1,056–1,360.
 4. **Elevator lobby** (z ≈ 720–790, near x 400, y −4,250/−4,570). `elevator1`/`elevator2` ride from z 788 up to z 3,824, about 3,000 units.
 5. **Upper floor, middle of the tower** (z ≈ 3,124–3,968, spanning y −8,176 to −848). A **grand opera/stage-style theater**: players cross the main stage, then go down the middle of the (empty) audience seating. The stepped floors at z 3,124–3,584 to the south are likely the seating (guess).
 6. **Back to the elevator floor, heading left now**, to a **second elevator (not made yet)** that goes up to:
 7. **Hotel/residential floor** (z ≈ 4,864, ceiling ≈ 5,024–5,056, x −2,304..1,376, y −8,320..−5,344). Its windows look out at the skyline to show how high up players are.
 8. **Teleporter = finish.** `teleport_origin1` (−2160 −7344 4928, the west end of the hotel floor) sends players to `teleport_destination1` (192 1664 1888), the end area. That's a **crude temporary tower** behind and above the spawn (floors at z ≈ 1,856–2,144), still to be rebuilt.
+
+**BLU (activator):** there are **no traps, no BLU path and no trap buttons yet**. That's the biggest missing piece. The design calls for an exclusive BLU path that RED can't enter or interfere with. The only BLU area so far is a **spawn balcony** on the cinema's front at about elevator-lobby height. It overlooks the outdoor RED spawn so each team can see the other, and RED can check whether BLU is AFK before rushing in. Location (guess): z ≈ 656–720, x −800..960, y −1,536..−544, behind the glass at the front facade. There's no BLU `info_player_teamspawn` there yet (see bug 1), and the map has no team filters (`filter_activator_tfteam`) or `func_respawnroomvisualizer`.
 
 Other structures: the tower crown goes up to z 6,592 above the central block; there's a pit below ground (z −768) near the monorail and an unknown area at z 1,824 far east (x 4,224..5,440).
 
