@@ -25,6 +25,21 @@ The owner dislikes working in Hammer. Do as much as possible by editing the .vmf
 - The file is about 14 MB (around 615k lines). Search it with grep or read it in parts; don't read it whole.
 - After editing, ask the owner to open the map in Hammer++, check it visually, then compile and playtest. CompilePal is recommended for compiling and for packing custom content.
 
+## Intended route (owner's design)
+
+Heights (z) and areas were measured from the .vmf. Ones marked "(guess)" haven't been confirmed by the owner.
+
+1. **Spawn outside**, at ground level on the north side (z ≈ 0, `info_player_teamspawn` at 192 1536 16).
+2. **Enter the cinema** into a hallway, then **pass through theater 1** (the west wing, with sunken stepped floors at z 320–770). The `theater1_trigger_push` triggers are here: 8 always-on pushes at speed 1000.
+3. **Go up to the second floor.** Another fully built theater here is a **trap room (not made yet)**: a trap is meant to push players into it, where they die. Location (guess): the floors at z ≈ 1,056–1,360.
+4. **Elevator lobby** (z ≈ 720–790, near x 400, y −4,250/−4,570). `elevator1`/`elevator2` ride from z 788 up to z 3,824, about 3,000 units.
+5. **Upper floor, middle of the tower** (z ≈ 3,124–3,968, spanning y −8,176 to −848). A **grand opera/stage-style theater**: players cross the main stage, then go down the middle of the (empty) audience seating. The stepped floors at z 3,124–3,584 to the south are likely the seating (guess).
+6. **Back to the elevator floor, heading left now**, to a **second elevator (not made yet)** that goes up to:
+7. **Hotel/residential floor** (z ≈ 4,864, ceiling ≈ 5,024–5,056, x −2,304..1,376, y −8,320..−5,344). Its windows look out at the skyline to show how high up players are.
+8. **Teleporter = finish.** `teleport_origin1` (−2160 −7344 4928, the west end of the hotel floor) sends players to `teleport_destination1` (192 1664 1888), the end area. That's a **crude temporary tower** behind and above the spawn (floors at z ≈ 1,856–2,144), still to be rebuilt.
+
+Other structures: the tower crown goes up to z 6,592 above the central block; there's a pit below ground (z −768) near the monorail and an unknown area at z 1,824 far east (x 4,224..5,440).
+
 ## Current state
 
 - About 1,330 world brushes, 1,056 prop_static, about 480 light entities, a single env_cubemap.
