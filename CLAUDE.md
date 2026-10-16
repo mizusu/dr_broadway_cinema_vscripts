@@ -11,7 +11,7 @@ The owner dislikes working in Hammer. Do as much as possible by editing the .vmf
 - `create_following_bot.nut` is a generic `base_boss` NPC that follows players, from the same code base as CBS.
 - `player_utils.nut`, `deep_print_table.nut` and `showevents.nut` are helpers and debug tools.
 - `hello_world.nut` is run by the map's `helloWorldLogicScript`. It is an early multi-kill announcer prototype: it counts every player death within 2 seconds (not yet per BLU attacker) and alternates `sound_blu_multikill1`/`2`. It also holds debug helpers and the 2-second spawn uber.
-- `patrons_damage_monitor.nut` is included by both bot scripts but is **lost**: it isn't in the repo or on the owner's machines. The only thing used from it is `recordPatronDamage(params)`, called in `create_following_bot.nut`'s `OnScriptHook_OnTakeDamage`. It was probably meant to track damage to the ambient "patron" NPCs that trigger the CBS boss. It needs rewriting, or a stub, before those scripts run cleanly.
+- `patrons_damage_monitor.nut` is included by both bot scripts. The original was lost, so it is currently a stub that defines an empty `::recordPatronDamage(params)`, the only thing the scripts use from it (called in `create_following_bot.nut`'s `OnScriptHook_OnTakeDamage`). The real logic, tracking damage to the ambient "patron" NPCs that trigger the CBS boss, is to be written together with the CBS trigger.
 - `.vscode/launch.json` holds the VS Code VScript debugger config (attach to localhost, Squirrel3).
 
 ## Rules for editing the .vmf
