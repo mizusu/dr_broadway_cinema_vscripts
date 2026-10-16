@@ -17,19 +17,19 @@ BLU never walks the RED route. They move between sealed rooms that have windows 
 | Booth | Where | Overlooks | Traps |
 |---|---|---|---|
 | **B0 Balcony** (spawn) | Front facade, z 720 (exists) | Plaza and entrance | T1 |
-| **B1 Projection booth** | West wing, between the two theaters (guess: above the corridor, z ≈ 900–1100) | Theater 1, the corridor, the trap theater | T2, T3 |
-| **B2 Lobby control room** | Next to the elevator lobby, z ≈ 720–790 | Elevator lobby | T4, T5 |
+| **B1 Projection booth** | West wing, between the two theaters (guess: above the corridor, z ≈ 900–1100) | The safe theater, the corridor, the trap theater | T2, T3 |
+| **B2 Lobby control room** | Second floor, next to the elevator lobby, z ≈ 720–790 | The second-floor hallway and the elevator lobby | T4, T5 |
 | **B3 Lighting box** | Back of the opera hall, in or near the curved boxes (y ≈ −7,600, z ≈ 3,300) | Stage and seats | T6–T9 |
 | **B4 Hotel security office** | Hotel floor, z 4,864 (guess: an unused room off the H corridor) | Hotel corridors | T10–T12 |
 
-**Sealing the balcony (needed now):** the balcony gallery leads straight to the elevator lobby. Either block that corridor (wall or `func_respawnroomvisualizer`), or close the balcony off completely so BLU's only way out is the B0 → B1 pad.
+**Sealing the balcony (needed now):** the balcony is the front of a gallery that runs into the second-floor hallway and elevator lobby, which are part of RED's route. So the seal has to be at the balcony itself. Suggestion: a glass partition across x −800..960 at y ≈ −1,500, so the teams can still see each other, with BLU's only way out being the B0 → B1 pad.
 
 ## Traps along the route
 
 | # | Section | Idea | Hammer placeholders | Script |
 |---|---|---|---|---|
 | T1 | Entrance hallway | **Popcorn machine overload:** fire and steam along the hallway | `trigger_hurt`, particles | Enable for 2 s, sound |
-| T2 | Theater 1 (passed through) | **Lights out, rows drop:** lights cut, then a band of seat rows sinks | `func_door` rows, light names | Lights off → 0.5 s → open the doors, close after 4 s |
+| T2 | Safe theater (passed through) | **Lights out, rows drop:** lights cut, then a band of seat rows sinks | `func_door` rows, light names | Lights off → 0.5 s → open the doors, close after 4 s |
 | T3 | Corridor between the theaters | **The push trap (your design):** RED gets pushed into the trap theater, the doors lock, and "the movie kills them" | existing `theater1_trigger_push`, a door, `trigger_hurt` in the theater | Enable pushes for 3 s, lock the door, hurt after 2 s |
 | T4 | Elevator lobby | **Anti-camping sweep:** a rotating laser or spotlight bar sweeps the lobby while players wait | `func_rotating` + parented `trigger_hurt` | Start/stop it, one sweep |
 | T5 | Elevator ride (optional) | **Out of order:** BLU stalls a car mid-shaft for 5 s, with flickering lights (delays, doesn't kill) | uses the `elevator1/2` names | `SetSpeed 0`, then resume after 5 s |
@@ -50,13 +50,17 @@ At the moment, RED teleports to the end tower and the round can't end. Suggested
 ## Still to build (not traps)
 
 - The trap theater's death mechanism and a lockable door (T3).
-- The second elevator, from the elevator-arrival floor (z ≈ 3,968) up to the hotel (z ≈ 4,864), about 900 units.
+- The opera-level elevator, from the left side of the elevator-arrival floor (z ≈ 3,968) up to the hotel (z ≈ 4,864), about 900 units.
 - The end tower and the finale arena.
 
-## Questions for the owner
+## Decisions so far
 
-1. Which west-wing theater do players pass through, and which is the trap? Most of the push triggers point south (yaw 268), so my guess is that the north theater (screen at y ≈ −2,080) is passed through and the south theater (screen at y ≈ −5,450) is the trap.
-2. Where is "the second floor" you go up to after theater 1, and where are its stairs?
-3. Where should the second elevator be? I'm guessing the left (west) side of the elevator-arrival floor.
-4. Are you happy with the rooftop showdown ending?
-5. Any traps you already had in mind for a section?
+- **The two west-wing theaters** are identical and unnamed. One is the safe theater RED passes through; the other is the trap room. Which is which is still open. Recommendation: **north = safe, south = trap**, because most of the existing push triggers already point south (yaw 268).
+- **The second floor** is the level of the elevator lobby and the BLU balcony (z ≈ 720–790). RED leaves the safe theater into a hallway on it.
+- **The opera-level elevator** (not built yet) goes from the elevator-arrival floor up to the hotel floor.
+
+## Open questions for the owner
+
+1. Is north = safe, south = trap OK?
+2. Are you happy with the rooftop showdown ending?
+3. Any traps you already had in mind for a section?
