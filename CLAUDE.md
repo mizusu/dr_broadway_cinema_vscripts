@@ -19,7 +19,7 @@ The owner dislikes working in Hammer. Do as much as possible by editing the .vmf
 - Commit before each editing session; git history replaces manual `.bak` copies.
 - The owner must close the map in Hammer++ before Claude edits the file, or Hammer will overwrite the changes.
 - Keep the CRLF line endings and tab indentation the file already uses. `.gitattributes` stops git from converting them, so edits must write CRLF too.
-- Every `id` (entities, solids, sides) must be unique: when adding things, use ids above the current maximum.
+- When adding things, give them `id`s above the current maximum (entities, solids and sides). The file already had 385 repeated ids before Claude edited it, probably because Hammer numbers object types separately, so don't try to "fix" those.
 - Leave the Hammer++ sections (`palette_plus`, `colorcorrection_plus`, `light_plus`, `bgimages_plus`) and the existing visgroups as they are.
 - Entity outputs in `connections` use the 0x1B (ESC) character as a separator, not commas.
 - The file is about 14 MB (around 615k lines). Search it with grep or read it in parts; don't read it whole.
@@ -38,7 +38,7 @@ Heights (z) and areas were measured from the .vmf. Ones marked "(guess)" haven't
 7. **Hotel/residential floor** (z ≈ 4,864, ceiling ≈ 5,024–5,056, x −2,304..1,376, y −8,320..−5,344). Its windows look out at the skyline to show how high up players are.
 8. **Teleporter = finish.** `teleport_origin1` (−2160 −7344 4928, the west end of the hotel floor) sends players to `teleport_destination1` (192 1664 1888), the end area. That's a **crude temporary tower** behind and above the spawn (floors at z ≈ 1,856–2,144), still to be rebuilt.
 
-**BLU (activator):** there are **no traps, no BLU path and no trap buttons yet**. That's the biggest missing piece. The design calls for an exclusive BLU path that RED can't enter or interfere with. The only BLU area so far is a **spawn balcony** on the cinema's front at about elevator-lobby height. It overlooks the outdoor RED spawn so each team can see the other, and RED can check whether BLU is AFK before rushing in. Location (guess): z ≈ 656–720, x −800..960, y −1,536..−544, behind the glass at the front facade. There's no BLU `info_player_teamspawn` there yet (see bug 1), and the map has no team filters (`filter_activator_tfteam`) or `func_respawnroomvisualizer`.
+**BLU (activator):** there are **no traps, no BLU path and no trap buttons yet**. That's the biggest missing piece. The design calls for an exclusive BLU path that RED can't enter or interfere with. The only BLU area so far is a **spawn balcony** on the cinema's front at about elevator-lobby height. It overlooks the outdoor RED spawn so each team can see the other, and RED can check whether BLU is AFK before rushing in. Location (confirmed): floor z 720, x −800..960, y −1,536..−832, behind the glass at the front facade. A short staircase beside the glass (x ≈ −770..−590) leads out to an outdoor ledge (z 656). It now has 4 BLU spawns. **It is not sealed off:** the balcony is the front of a U-shaped gallery around the atrium that runs straight into the elevator lobby corridor, so BLU can walk to the elevators and RED can walk up to the balcony. Closing that off is part of the BLU path work. The map has no team filters (`filter_activator_tfteam`) or `func_respawnroomvisualizer` yet.
 
 Other structures: the tower crown goes up to z 6,592 above the central block; there's a pit below ground (z −768) near the monorail and an unknown area at z 1,824 far east (x 4,224..5,440).
 
@@ -55,7 +55,7 @@ Other structures: the tower crown goes up to z 6,592 above the central block; th
 
 ## Known bugs to fix first
 
-1. Only one `info_player_teamspawn`, with no team set. Need many RED spawns, a separate BLU (death player) spawn, and the arena logic deathrun servers usually expect (`tf_logic_arena`).
+1. ~~Spawns and arena logic~~ added (not yet playtested): 34 RED spawns on the plaza (the original at 192 1536 16 plus a 3×11 grid at x −288..672, y 1184..1376, 96 apart, facing south), 4 BLU spawns on the balcony (x ±128, y −1024/−1152, z 736, facing north), and `tf_logic_arena` named `arena_logic` (CapEnableDelay 60) at 64 1024 64.
 2. Outputs pointing to entities that do not exist:
    - A theater func_button targets `theater1_movelinear` (does not exist).
    - `test_button` / `test_button2` target `ms3_mono1` (the train is actually named `ms3_mono_train1`). **Leave it alone:** the MS3 monorail boss fight may be scrapped, and the owner won't touch it until the map is finished.
