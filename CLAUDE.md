@@ -41,12 +41,10 @@ The owner dislikes working in Hammer. Do as much as possible by editing the .vmf
 1. Only one `info_player_teamspawn`, with no team set. Need many RED spawns, a separate BLU (death player) spawn, and the arena logic deathrun servers usually expect (`tf_logic_arena`).
 2. Outputs pointing to entities that do not exist:
    - A theater func_button targets `theater1_movelinear` (does not exist).
-   - `test_button` / `test_button2` target `ms3_mono1` (the train is actually named `ms3_mono_train1`).
-   - `elevator1_track_floor2` targets `elevator1_track_floor3` (does not exist), and no node leads to floor2.
-3. `elevator1_track_destination` OnPass fires elevator2 outputs (SetSpeed 0 / open doors) instead of elevator1's, so elevator1 doesn't stop at the top and likely loops back down.
-4. The trigger_multiple that opens elevator1's doors is parented to `elevator2` instead of `elevator1`.
-5. The `trigger_hurt` (damage 200) starts disabled and nothing ever enables it.
-6. Custom content must be packed into the BSP: `skullgirls/*` sounds, textures in the CUSTOMDEV and MYTEXTURES folders, and a few non-TF2 models. This content lives outside the repo (Google Drive).
+   - `test_button` / `test_button2` target `ms3_mono1` (the train is actually named `ms3_mono_train1`). **Leave it alone:** the MS3 monorail boss fight may be scrapped, and the owner won't touch it until the map is finished.
+3. ~~Elevator bugs~~ fixed in commit 0def5a9: elevator1's top stop now stops elevator1, both door triggers are parented to their own car, and the orphan `elevator1_track_floor2` was removed. Not yet playtested.
+4. The `trigger_hurt` (damage 200, around 648 -640 368) starts disabled and nothing enables it. It is an abandoned, unfinished trap. Leave it unless the owner revisits it.
+5. Custom content must be packed into the BSP: `skullgirls/*` sounds, textures in the CUSTOMDEV and MYTEXTURES folders, and a few non-TF2 models. This content lives outside the repo (Google Drive).
 
 ## Planned features (VScript)
 
@@ -59,4 +57,4 @@ The owner dislikes working in Hammer. Do as much as possible by editing the .vmf
 
 ## Suggested order
 
-Fix bugs 2–5 → add spawns and arena logic → compile and test → wire the scripts into the map → multi-kill script → first traps.
+Fix the theater button target → add spawns and arena logic → compile and test → wire the scripts into the map → multi-kill script → first traps.
