@@ -167664,7 +167664,7 @@ entity
 	"id" "88261"
 	"classname" "trigger_multiple"
 	"origin" "366 -4251.15 808"
-	"parentname" "elevator2"
+	"parentname" "elevator1"
 	"spawnflags" "1"
 	"StartDisabled" "0"
 	"wait" "1"
@@ -175460,29 +175460,6 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 10000]"
-	}
-}
-entity
-{
-	"id" "51060"
-	"classname" "path_track"
-	"angles" "0 0 0"
-	"orientationtype" "1"
-	"spawnflags" "8"
-	"speed" "200"
-	"target" "elevator1_track_floor3"
-	"targetname" "elevator1_track_floor2"
-	connections
-	{
-		"OnPass" "elevator1SetSpeed00-1"
-	}
-	"origin" "352 -3632 2336"
-	editor
-	{
-		"color" "255 192 0"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1500]"
 	}
 }
 entity
@@ -187629,6 +187606,7 @@ entity
 	"id" "603665"
 	"classname" "trigger_multiple"
 	"origin" "366 -4571.15 808"
+	"parentname" "elevator2"
 	"spawnflags" "1"
 	"StartDisabled" "0"
 	"wait" "1"
@@ -187932,9 +187910,9 @@ entity
 	"targetname" "elevator1_track_destination"
 	connections
 	{
-		"OnPass" "elevator2SetSpeed00-1"
-		"OnPass" "elevator2_doorrightOpen0-1"
-		"OnPass" "elevator2_doorleftOpen0-1"
+		"OnPass" "elevator1SetSpeed00-1"
+		"OnPass" "elevator1_doorrightOpen0-1"
+		"OnPass" "elevator1_doorleftOpen0-1"
 	}
 	"origin" "416 -4251.15 3824"
 	editor
