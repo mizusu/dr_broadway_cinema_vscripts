@@ -162132,7 +162132,7 @@ entity
 	"pushdir" "2 357 0"
 	"spawnflags" "67"
 	"speed" "1000"
-	"StartDisabled" "0"
+	"StartDisabled" "1"
 	"targetname" "theater1_trigger_push"
 	solid
 	{
@@ -164336,7 +164336,7 @@ entity
 	"pushdir" "4 268 0"
 	"spawnflags" "67"
 	"speed" "1000"
-	"StartDisabled" "0"
+	"StartDisabled" "1"
 	"targetname" "theater1_trigger_push"
 	solid
 	{
@@ -190761,7 +190761,7 @@ entity
 	"pushdir" "4 268 0"
 	"spawnflags" "67"
 	"speed" "1000"
-	"StartDisabled" "0"
+	"StartDisabled" "1"
 	"targetname" "theater1_trigger_push"
 	solid
 	{
@@ -190898,7 +190898,7 @@ entity
 	"pushdir" "4 88 0"
 	"spawnflags" "67"
 	"speed" "1000"
-	"StartDisabled" "0"
+	"StartDisabled" "1"
 	"targetname" "theater1_trigger_push"
 	solid
 	{
@@ -408376,7 +408376,7 @@ entity
 	"pushdir" "4 268 0"
 	"spawnflags" "67"
 	"speed" "1000"
-	"StartDisabled" "0"
+	"StartDisabled" "1"
 	"targetname" "theater1_trigger_push"
 	solid
 	{
@@ -613086,7 +613086,7 @@ entity
 	"pushdir" "5 360 0"
 	"spawnflags" "67"
 	"speed" "1000"
-	"StartDisabled" "0"
+	"StartDisabled" "1"
 	"targetname" "theater1_trigger_push"
 	solid
 	{
@@ -613223,7 +613223,7 @@ entity
 	"pushdir" "4 268 0"
 	"spawnflags" "67"
 	"speed" "1000"
-	"StartDisabled" "0"
+	"StartDisabled" "1"
 	"targetname" "theater1_trigger_push"
 	solid
 	{
@@ -613360,7 +613360,7 @@ entity
 	"pushdir" "3 91 0"
 	"spawnflags" "67"
 	"speed" "1000"
-	"StartDisabled" "0"
+	"StartDisabled" "1"
 	"targetname" "theater1_trigger_push"
 	solid
 	{
