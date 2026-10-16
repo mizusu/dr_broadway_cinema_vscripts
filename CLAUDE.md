@@ -10,7 +10,8 @@ The owner dislikes working in Hammer. Do as much as possible by editing the .vmf
 - `create_cbs.nut` is the Christian Brutal Sniper boss: a `base_boss` NPC with a theme, death sound and attacks. It is already under way.
 - `create_following_bot.nut` is a generic `base_boss` NPC that follows players, from the same code base as CBS.
 - `player_utils.nut`, `deep_print_table.nut` and `showevents.nut` are helpers and debug tools.
-- `patrons_damage_monitor.nut` is included by both bot scripts but is **not in the repo**. Ask the owner where it is before relying on it.
+- `hello_world.nut` is run by the map's `helloWorldLogicScript`. It is an early multi-kill announcer prototype: it counts every player death within 2 seconds (not yet per BLU attacker) and alternates `sound_blu_multikill1`/`2`. It also holds debug helpers and the 2-second spawn uber.
+- `patrons_damage_monitor.nut` is included by both bot scripts but is **lost**: it isn't in the repo or on the owner's machines. The only thing used from it is `recordPatronDamage(params)`, called in `create_following_bot.nut`'s `OnScriptHook_OnTakeDamage`. It was probably meant to track damage to the ambient "patron" NPCs that trigger the CBS boss. It needs rewriting, or a stub, before those scripts run cleanly.
 - `.vscode/launch.json` holds the VS Code VScript debugger config (attach to localhost, Squirrel3).
 
 ## Rules for editing the .vmf
@@ -31,7 +32,7 @@ The owner dislikes working in Hammer. Do as much as possible by editing the .vmf
 - Two elevators (`elevator1`, `elevator2`): func_tracktrain + path_track + func_door doors.
 - Theater has `theater1_trigger_push` triggers. Teleporter `teleport_origin1` → `teleport_destination1`, with a portal effect.
 - "MS3 Boss" monorail: `ms3_mono_train1` on `ms3_mono1_track1..3` (currently hidden in Hammer).
-- Script: a `logic_script` named `helloWorldLogicScript` running `hello_world.nut`. That file is not in this repo, and the CBS and bot scripts are not yet wired into the map.
+- Script: a `logic_script` named `helloWorldLogicScript` running `hello_world.nut`. The CBS and bot scripts are not yet wired into the map.
 - Multi-kill announcer: ambient_generic entities `sound_blu_doublekill`, `_triplekill`, `_overkill`, `_killtacular`, `_multikill1`, `_multikill2` (4 stacked copies each, using `skullgirls/*.mp3`), triggered only by test buttons.
 - Test entities: `bison_test` (env_explosion), `bison_test_point_hurt` (3 point_hurt), `test_button`, `test_button2`.
 
