@@ -29,8 +29,8 @@ BLU never walks the RED route. They move between sealed rooms that have windows 
 | # | Section | Idea | Hammer placeholders | Script |
 |---|---|---|---|---|
 | T1 | Entrance hallway | **Popcorn machine overload:** fire and steam along the hallway | `trigger_hurt`, particles | Enable for 2 s, sound |
-| T2 | Safe theater (passed through) | **Lights out, rows drop:** lights cut, then a band of seat rows sinks | `func_door` rows, light names | Lights off → 0.5 s → open the doors, close after 4 s |
-| T3 | Corridor between the theaters | **The push trap (your design):** RED gets pushed into the trap theater, the doors lock, and "the movie kills them" | existing `theater1_trigger_push`, a door, `trigger_hurt` in the theater | Enable pushes for 3 s, lock the door, hurt after 2 s |
+| T2 | Safe south theater (passed through) | **Lights out, rows drop:** lights cut, then a band of seat rows sinks | `func_door` rows, light names | Lights off → 0.5 s → open the doors, close after 4 s |
+| T3 | Corridor between the theaters | **The push trap (your design):** RED gets pushed into the north (trap) theater, the doors lock, and "the movie kills them" | existing `theater1_trigger_push`, a door, `trigger_hurt` in the theater | Enable pushes for 3 s, lock the door, hurt after 2 s |
 | T4 | Elevator lobby | **Anti-camping sweep:** a rotating laser or spotlight bar sweeps the lobby while players wait | `func_rotating` + parented `trigger_hurt` | Start/stop it, one sweep |
 | T5 | Elevator ride (optional) | **Out of order:** BLU stalls a car mid-shaft for 5 s, with flickering lights (delays, doesn't kill) | uses the `elevator1/2` names | `SetSpeed 0`, then resume after 5 s |
 | T6 | Opera stage | **Stage trapdoor:** a classic theater trapdoor drops players into the pit under the stage | `func_door` floor panel, `trigger_hurt` under the stage | Open, close after 3 s |
@@ -55,12 +55,11 @@ At the moment, RED teleports to the end tower and the round can't end. Suggested
 
 ## Decisions so far
 
-- **The two west-wing theaters** are identical and unnamed. One is the safe theater RED passes through; the other is the trap room. Which is which is still open. Recommendation: **north = safe, south = trap**, because most of the existing push triggers already point south (yaw 268).
+- **The two west-wing theaters** are identical and unnamed. **South = safe** (RED passes through it), **north = trap room**. Most of the existing pushes point south (yaw 268), and two of them (y −4,320 and −4,592) sit inside the south theater, so they need re-aiming toward the north theater when the trap is built.
 - **The second floor** is the level of the elevator lobby and the BLU balcony (z ≈ 720–790). RED leaves the safe theater into a hallway on it.
 - **The opera-level elevator** (not built yet) goes from the elevator-arrival floor up to the hotel floor.
 
 ## Open questions for the owner
 
-1. Is north = safe, south = trap OK?
-2. Are you happy with the rooftop showdown ending?
-3. Any traps you already had in mind for a section?
+1. Are you happy with the rooftop showdown ending?
+2. Any traps you already had in mind for a section?
