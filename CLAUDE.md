@@ -9,12 +9,12 @@ The owner dislikes working in Hammer. Do as much as possible by editing the .vmf
 ## Repo layout
 
 - `dr_skullgirls_cinema.vmf` is the map source and the single source of truth. It used to be kept in Google Drive; this repo copy now replaces that.
-- `create_cbs.nut` is the Christian Brutal Sniper boss: a `base_boss` NPC with a theme, death sound and attacks. It is already under way.
-- `create_following_bot.nut` is a generic `base_boss` NPC that follows players, from the same code base as CBS.
+- `create_cbs.nut` is the Christian Brutal Sniper boss. The owner says it is `create_following_bot.nut` with the CBS model (`models/christian_brutal_sniper/sniper.mdl`), the `cbs_theme` music on spawn and Sniper death lines. The owner's melee attempt (`DoMeleeAttack`) probably never dealt damage, and it has no swing animation.
+- `create_following_bot.nut` is **the valuable piece** (the owner's words): a `base_boss` NextBot that pathfinds over the nav mesh, gets around obstacles and follows a player. It has its own health tracking and ragdolls on death. It uses the HL2 `humans/group02/female_04` model and is the base for the ambient "patron" NPCs. It still spawns at the host's crosshair (`BotCreate`, from the console) and uses `GetListenServerHost()`, which returns nothing on a dedicated server.
 - `player_utils.nut`, `deep_print_table.nut` and `showevents.nut` are helpers and debug tools.
 - `hello_world.nut` is run by the map's `helloWorldLogicScript`. It is an early multi-kill announcer prototype: it counts every player death within 2 seconds (not yet per BLU attacker) and alternates `sound_blu_multikill1`/`2`. It also holds debug helpers and the 2-second spawn uber.
 - `patrons_damage_monitor.nut` is included by both bot scripts. The original was lost, so it is currently a stub that defines an empty `::recordPatronDamage(params)`, the only thing the scripts use from it (called in `create_following_bot.nut`'s `OnScriptHook_OnTakeDamage`). The real logic, tracking damage to the ambient "patron" NPCs that trigger the CBS boss, is to be written together with the CBS trigger.
-  An older, uncommitted copy of the original (2.7 KB) still sits in TF2's `tf/scripts/vscripts/`, which is an older clone of this repo.
+  The owner checked the lost original (2026-10-18): it only built a table of the lobby's player IDs and never tracked damage, so it isn't worth recovering. Write the trigger from scratch.
 - `facade.nut` runs the facade clock (real time) and the random marquee title. It is run by `facade_logic` and packed by `compile.ps1`.
 - `elevators.nut` runs the two elevators (see Current state). It is run by the `elevator_logic` logic_script and packed into the .bsp by `compile.ps1`.
 - `compile.ps1` compiles the map from the command line (`powershell -ExecutionPolicy Bypass -File .\compile.ps1`, add `-Final` for release lighting). It uses TF2's 32-bit `bin\` tools (the `bin\x64` ones fail without MaterialSystem.dll), works on a copy in `build/`, packs the scripts with bspzip and copies the .bsp to `tf\maps`. TF2 is at `D:\SteamLibrary\steamapps\common\Team Fortress 2`. It doesn't pack custom content, build cubemaps or a nav mesh; CompilePal (`C:\Tools\Compile.Pal.029`) does those.
@@ -117,7 +117,7 @@ Built 2026-10-18 at the owner's request, with creative liberty (no references fo
 ## Planned features (VScript)
 
 - Multi-kill announcer: hook `player_death`, count kills per BLU attacker within a short time window, play the matching sound once (replacing the stacked ambient_generics and test buttons). Fighting-game announcer lines too.
-- Christian Brutal Sniper boss (started in `create_cbs.nut`): ambient NPCs; if they get killed, the boss spawns and chases players (base_boss / NextBot + navmesh), with announcer, voice lines and music.
+- Roaming patrons and the Christian Brutal Sniper boss (started in `create_following_bot.nut` and `create_cbs.nut`, base_boss / NextBot + navmesh). The owner's full design is in [VISION.md](VISION.md) under "Patrons and the CBS boss": patrons who flee when hurt, lobby-wide damage tracking, CBS hunting the top damage dealers, then pacifying.
 - Holiday props: show a Halloween or Christmas prop set based on date / TF2 holiday checks.
 - Dynamic clocks, plus movie event text and banners that change with the time of day (point_worldtext, pre-packed material/skin swaps).
 - Not possible in VScript: fetching posters/titles from the internet (sandboxed, no HTTP). That would need a SourceMod plugin, and posters could only switch between pre-packed images.

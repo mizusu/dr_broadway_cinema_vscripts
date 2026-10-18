@@ -19,6 +19,29 @@ The owner has wanted to make this map since 2020. It comes from a childhood memo
 - **Skullgirls music in the background, the main menu theme and/or the character select theme.** It plays **by random chance, not guaranteed, and never looping**, because constant music gets annoying fast. These tracks are not in the map yet. `tf/sound/skullgirls/` currently has the multi-kill sounds, `round_start1`, red-team round sounds, `cbs_theme` and `stone_cold_motivator_theme`.
 - **Announcers, fighting-game style:** the Halo multi-kill announcer (double kill, triple kill, overkill, killtacular...) is the main one. For big multi-kills, the **Capcom vs. SNK 2 announcer sometimes chimes in** too. The reference clips (`round_start1-4`, `double_ko`, `big_damage`, `good one` and others) are in `user-ideas/Skullgirls Cinema/`.
 
+## Patrons and the CBS boss
+
+Described by the owner (2026-10-18). Built on `create_following_bot.nut` (the pathfinding `base_boss` NextBot) and `create_cbs.nut`.
+
+- **Patrons make the map feel alive.** A couple of dozen NPCs (not hundreds) roam the map minding their own business: buying tickets, getting popcorn, eating in the plazas, sitting on benches, watching movies in the theaters.
+- **Players can attack them.** A hurt patron flees: it switches to its running animation and runs to a random spot, but slower than players, so a player at normal speed can still catch it.
+- **Damage is tracked per player.** The script records how much damage each player has done to patrons. When the **combined damage from the whole lobby** passes a threshold, **CBS spawns**.
+- **CBS hunts the worst offenders:** the players who did the most patron damage (a set number, likely the top three). His theme overrides the map's music while he hunts.
+- **CBS is deadly but beatable in theory.** He kills in one or two hits. Players have melee too, so a lobby that coordinates could fight him off, but anyone he's after alone will have a hard time surviving.
+- **CBS has voice lines** for each kill and similar moments.
+- **Afterwards he calms down.** Once he has killed his targets, he pacifies and wanders around like a patron, until another player provokes him.
+
+**Rules (the owner's answers, 2026-10-18):**
+
+- **REDs are the ones who attack patrons**, at any time during the round, including mid-run. Patrons are found almost everywhere on the map.
+- **Only RED damage counts.** BLU deals no tracked damage, and patrons killed by BLU's traps don't count toward CBS. **BLU is immune to CBS.**
+- **Patrons normally stay out of trap zones**, but one can wander into a trap or get killed by one. That's fine, even funny.
+- **A player CBS kills stays dead for the round** (arena rules).
+- **Patron damage resets every round.**
+- **CBS doesn't give up on a target.** He chases a target until that player dies, from his hit, a BLU trap, the environment or anything else, and only then moves on.
+- **Elevators and teleporters:** CBS doesn't ride them. When his target gets away through one, he teleports near the exit (the elevator's arrival landing, the teleporter destination), not next to the target.
+- **Lobby size changes the rules** (agreed, details open). A small lobby and a full 32-player lobby need different numbers, and the owner wasn't sure how to handle most of a 31-player RED team attacking patrons at once. A suggestion to settle later: scale the threshold with the number of REDs alive at round start, spawn CBS at most once per round, and scale the number of targets (for example 1 with up to 6 REDs, 2 up to 16, 3 above that).
+
 ## Reference folder: `user-ideas/`
 
 The owner's personal mood board (about 240 MB of images and sounds), sorted by part of the route:
