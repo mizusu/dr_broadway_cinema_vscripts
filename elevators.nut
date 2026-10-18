@@ -7,8 +7,10 @@
 // There are no buttons, so nobody can send a car up empty or grief it.
 //
 // Doors never close on a player: while someone stands in the doorway the car
-// waits (and pushes them out after BLOCK_PUSH_TIME), and if the doors still
-// fail to close, they reopen and the car tries again instead of leaving.
+// waits (and pushes them out after BLOCK_PUSH_TIME). As soon as the doorway is
+// clear, an invisible player clip seals it so nobody can step back in while the
+// doors close; a griefer is simply left behind. If the doors still fail to
+// close, they reopen and the car tries again instead of leaving.
 //
 // Map entities per car N (see CLAUDE.md):
 //   elevatorN                         func_movelinear car: Open = ride up, Close = ride down.
@@ -17,6 +19,7 @@
 //   elevatorN_doorleft / _doorright   car doors, parented to the car
 //   elevatorN_landing_bottom_left/_right, elevatorN_landing_top_left/_right
 //                                     landing doors in the shaft frames, closed while the car is away
+//   elevatorN_doorway_clip_bottom/_top func_brush player clips outside the landing doors (start disabled)
 
 DEPART_DELAY <- 5.0      // seconds from the first RED stepping in until the doors close
 DOOR_TIME <- 1.0         // time the doors get to close before the car moves
@@ -33,11 +36,12 @@ CAR_HALF_X <- 92
 CAR_HALF_Y <- 100
 CAR_FLOOR_Z <- -100
 CAR_TOP_Z <- 80
-// Doorway: car doors at x -96..-92 and landing doors at x -102..-98 relative to the
-// car's origin, 104 units wide. A 48-unit player hull overlaps them within this box.
-DOORWAY_X_MIN <- -126
+// Doorway relative to the car's origin: the clip (x -128..-103, 112 wide), the landing
+// doors (x -102..-98) and the car doors (x -96..-92). A 48-unit player hull overlaps
+// one of them anywhere in this box.
+DOORWAY_X_MIN <- -152
 DOORWAY_X_MAX <- -66
-DOORWAY_HALF_Y <- 78
+DOORWAY_HALF_Y <- 80
 DOOR_PUSH <- Vector(-400, 0, 150)   // out of the car, toward the landing (both landings face -x)
 
 HUD_PRINTCENTER <- 4
@@ -68,6 +72,7 @@ function SetupElevator(n)
             [FindOrWarn(prefix + "_landing_bottom_left"), FindOrWarn(prefix + "_landing_bottom_right")],
             [FindOrWarn(prefix + "_landing_top_left"), FindOrWarn(prefix + "_landing_top_right")]
         ]
+        clips = [FindOrWarn(prefix + "_doorway_clip_bottom"), FindOrWarn(prefix + "_doorway_clip_top")]
         closedPos = {}   // door entity index -> local origin when closed
         state = "idle"   // idle, countdown, closing, moving, open_top
         floor = 0        // 0 = lobby, 1 = top; while moving, the floor it is heading to
@@ -104,14 +109,24 @@ function FloorDoors(car)
     return result
 }
 
+function SetClip(car, enabled)
+{
+    local clip = car.clips[car.floor]
+    if (clip != null && clip.IsValid())
+        EntFireByHandle(clip, enabled ? "Enable" : "Disable", "", 0, null, null)
+}
+
 function OpenDoors(car)
 {
+    SetClip(car, false)
     foreach (door in FloorDoors(car))
         EntFireByHandle(door, "Open", "", 0, null, null)
 }
 
+// Only call this with the doorway clear: the clip goes up first so nobody can step back in.
 function CloseDoors(car)
 {
+    SetClip(car, true)
     foreach (door in FloorDoors(car))
         EntFireByHandle(door, "Close", "", 0, null, null)
 }
