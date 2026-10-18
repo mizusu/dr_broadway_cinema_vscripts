@@ -36,7 +36,7 @@ The owner dislikes working in Hammer. Do as much as possible by editing the .vmf
 
 Heights (z) and areas were measured from the .vmf. Ones marked "(guess)" haven't been confirmed by the owner.
 
-1. **Spawn outside**, at ground level on the north side (z ≈ 0, `info_player_teamspawn` at 192 1536 16).
+1. **Spawn outside**, on the closed-off street in front of the cinema (z 0). See "Premiere Night forecourt" below.
 2. **Enter the cinema** into a hallway on the first floor. The west wing has **two identical theaters** (one copy-pasted from the other), with sunken stepped floors at z 320–770 and a corridor between them. The **north theater** (screen at y ≈ −2,080) and **south theater** (screen at y ≈ −5,450) are unnamed. **The south theater is the safe one** RED passes through. **The north theater is the trap room**: a trap funnels RED into it and they die (owner's decision). Most of the existing pushes point south (yaw 268), and two of them (y −4,320 and −4,592) sit inside the south theater, so they need re-aiming toward the north theater when the trap is built. The 8 `theater1_trigger_push` triggers are **leftover test entities** for that trap. They now start disabled (speed 1000), so the route is walkable. The trap should send `Enable` to `theater1_trigger_push` for a few seconds, then `Disable`.
 3. **Exit the safe theater up to the second floor** (z ≈ 720–790). The second floor is the level of the elevator lobby and the BLU balcony, and RED leaves the safe theater into a hallway on it. (The floors at z ≈ 1,056–1,360 are *not* the trap theater.)
 4. **Elevator lobby** (z ≈ 720–790, near x 400, y −4,250/−4,570). `elevator1`/`elevator2` ride from the lobby (floor z 720) up to the top floor (z 3,703), about 3,000 units.
@@ -47,9 +47,19 @@ Heights (z) and areas were measured from the .vmf. Ones marked "(guess)" haven't
 
 **Trap and BLU booth plan:** see [TRAP_PLAN.md](TRAP_PLAN.md) (a draft awaiting the owner's answers).
 
-**BLU (activator):** there are **no traps, no BLU path and no trap buttons yet**. That's the biggest missing piece. The design calls for an exclusive BLU path that RED can't enter or interfere with. The only BLU area so far is a **spawn balcony** on the cinema's front at about elevator-lobby height. It overlooks the outdoor RED spawn so each team can see the other, and RED can check whether BLU is AFK before rushing in. Location (confirmed): floor z 720, x −800..960, y −1,536..−832, behind the glass at the front facade. A short staircase beside the glass (x ≈ −770..−590) leads out to an outdoor ledge (z 656). It now has 4 BLU spawns. **It is not sealed off:** the balcony is the front of a U-shaped gallery around the atrium, and the gallery runs into the second-floor hallway and elevator lobby that RED uses. So BLU can walk to the elevators and RED can walk up to the balcony. The seal has to go at the balcony itself (suggestion: a glass partition across x −800..960 at y ≈ −1,500, so the teams can still see each other). The map has no team filters (`filter_activator_tfteam`) or `func_respawnroomvisualizer` yet.
+**BLU (activator):** there are **no traps, no BLU path and no trap buttons yet**. That's the biggest missing piece. The design calls for an exclusive BLU path that RED can't enter or interfere with. The only BLU area so far is a **spawn balcony** on the cinema's front at about elevator-lobby height. It overlooks the outdoor RED spawn so each team can see the other, and RED can check whether BLU is AFK before rushing in. Location (confirmed): floor z 720, x −800..960, y −1,536..−832, behind the glass at the front facade. A short staircase beside the glass (x ≈ −770..−590) leads out to an outdoor ledge (z 656). Its 4 BLU spawns stand on a VIP dais behind the glass (see the forecourt section). **It is not sealed off:** the balcony is the front of a U-shaped gallery around the atrium, and the gallery runs into the second-floor hallway and elevator lobby that RED uses. So BLU can walk to the elevators and RED can walk up to the balcony. The seal has to go at the balcony itself (suggestion: a glass partition across x −800..960 at y ≈ −1,500, so the teams can still see each other). The map has no team filters (`filter_activator_tfteam`) or `func_respawnroomvisualizer` yet.
 
 Other structures: the tower crown goes up to z 6,592 above the central block; there's a pit below ground (z −768) near the monorail and an unknown area at z 1,824 far east (x 4,224..5,440).
+
+## Premiere Night forecourt (outdoor spawn area)
+
+Built 2026-10-18 at the owner's request, with creative liberty (no references for this area). The owner's only requirements: RED can see the whole tower while waiting for the round, and RED can see whether BLU is AFK. Plan image: [docs/forecourt_plan.png](docs/forecourt_plan.png).
+
+- **Playable area:** x −1,400..1,600, y −400 (the facade) .. 1,950, ground z 0. Bounded by 16-unit `TOOLS/TOOLSPLAYERCLIP` world brushes up to z 3,000, with a line of HL2 jersey barriers (`props_c17/concrete_barrier001a`) just inside them. The rest of the city ground is still there but unreachable, as backdrop.
+- **The east-west street the RED spawns stand on (y 928..1,568) is "closed for the premiere":** sawhorse barricades (`props_hydro/barricade`) and "road closed" signs inside both ends, and parked HL2 cars and a van beyond the barriers.
+- **Red carpet:** a `func_detail` (`PROPS/CARPETFLOOR008A`) at x 142..398, y 470..1,180 from the street to the foot of the grand stairs, lined with `props_mvm/mvm_museum_rope001` velvet ropes.
+- **Searchlights:** four (`searchlight_rot_1..4`, x −1,200/1,400 at y 250, x −1,150/1,350 at y 1,800). Each is a `func_rotating` (nodraw base, 8–11°/s, two reversed) carrying a 4×-scaled `props_lights/spotlight001a` and a `point_spotlight` beam (`searchlight_beam_N`, pitch −60, length 3,000).
+- **BLU VIP dais:** sight-line traces showed that the entrance canopy (slab z 601–616, out to y −544) hid everything more than about 100 units behind the balcony glass from every RED spawn, so the old BLU spawns (y −1,024/−1,152) were invisible. Now a `func_detail` dais (x −500..700, y −940..−844, z 720..768, two 16-unit steps at the back) holds the 4 BLU spawns at y −876, z 776, x −384/−128/128/384, facing north. A warm light hangs over it, and a `light_spot` on the street (100 900 200, pitch −19) aims over the canopy at the window.
 
 ## Current state
 
@@ -65,7 +75,7 @@ Other structures: the tower crown goes up to z 6,592 above the central block; th
 
 ## Known bugs to fix first
 
-1. ~~Spawns and arena logic~~ added and working in the first playtest (arena needs a player on each team; test with `bot -team blue`): 34 RED spawns on the plaza (the original at 192 1536 16 plus a 3×11 grid at x −288..672, y 1184..1376, 96 apart, facing south), 4 BLU spawns on the balcony (x ±128, y −1024/−1152, z 736, facing north), and `tf_logic_arena` named `arena_logic` (CapEnableDelay 60) at 64 1024 64.
+1. ~~Spawns and arena logic~~ added and working in the first playtest (arena needs a player on each team; test with `bot -team blue`): 34 RED spawns on the plaza (the original at 192 1536 16 plus a 3×11 grid at x −288..672, y 1184..1376, 96 apart, facing south), 4 BLU spawns, since moved onto the VIP dais (see the forecourt section), and `tf_logic_arena` named `arena_logic` (CapEnableDelay 60) at 64 1024 64.
 2. Outputs pointing to entities that do not exist:
    - A theater func_button targets `theater1_movelinear` (does not exist).
    - `test_button` / `test_button2` target `ms3_mono1` (the train is actually named `ms3_mono_train1`). **Leave it alone:** the MS3 monorail boss fight may be scrapped, and the owner won't touch it until the map is finished.
