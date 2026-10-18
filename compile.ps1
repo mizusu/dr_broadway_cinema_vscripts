@@ -53,5 +53,7 @@ foreach ($script in @("elevators.nut")) {
 Copy-Item "$target.bsp" (Join-Path $game "maps") -Force
 # The compile wipes the cubemaps; this cfg rebuilds them in game with: exec dr_cubemaps
 Copy-Item (Join-Path $PSScriptRoot "dr_cubemaps.cfg") (Join-Path $game "cfg") -Force
+# TF2 runs cfg\<mapname>.cfg on every map load: cheats on, no waiting, a BLU bot.
+Copy-Item (Join-Path $PSScriptRoot "dr_test.cfg") (Join-Path $game "cfg\$map.cfg") -Force
 $mins = [math]::Round(((Get-Date) - $started).TotalMinutes, 1)
 Write-Host "`nDone in $mins min. Copied $map.bsp to tf\maps. In TF2: map $map, then exec dr_cubemaps" -ForegroundColor Green
