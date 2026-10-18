@@ -10,3 +10,6 @@
 
 # OS
 .DS_Store
+
+# Compile working folder (compile.ps1)
+build/
