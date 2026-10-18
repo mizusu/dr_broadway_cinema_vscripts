@@ -10,6 +10,8 @@ A first draft for the owner to edit. Locations come from the .vmf (top-down slic
 - **Hammer only holds named placeholders:** the moving brush (`func_door`/`func_movelinear`), the `trigger_hurt` or `trigger_push` volume, the BLU button and a marker. All behavior lives in Squirrel.
 - **Naming:** `trapNN_<part>`, for example `trap06_floor`, `trap06_hurt` and `trap06_button`. The script finds everything by name.
 
+**Built (2026-10-18):** `traps.nut` implements these rules for the simplest trap type, a square kill zone (button, zone and marker, no outputs). See CLAUDE.md. The `trap01` test copy is in the foyer.
+
 ## BLU path: booths linked by teleporters
 
 BLU never walks the RED route. They move between sealed rooms that have windows over each section, using **BLU-only teleporter pads** (a `trigger_teleport` with a `filter_activator_tfteam` set to BLU). RED can't enter a booth, because the booths have no doors.
@@ -22,7 +24,7 @@ BLU never walks the RED route. They move between sealed rooms that have windows 
 | **B3 Lighting box** | Back of the opera hall, in or near the curved boxes (y ≈ −7,600, z ≈ 3,300) | Stage and seats | T6–T9 |
 | **B4 Hotel security office** | Hotel floor, z 4,864 (guess: an unused room off the H corridor) | Hotel corridors | T10–T12 |
 
-**Sealing the balcony (needed now):** the balcony is the front of a gallery that runs into the second-floor hallway and elevator lobby, which are part of RED's route. So the seal has to be at the balcony itself. Suggestion: a glass partition across x −800..960 at y ≈ −1,500, so the teams can still see each other, with BLU's only way out being the B0 → B1 pad.
+**Sealing the balcony (done 2026-10-18, a glass wall at y −1,536..−1,520):** the balcony is the front of a gallery that runs into the second-floor hallway and elevator lobby, which are part of RED's route. So the seal has to be at the balcony itself. Suggestion: a glass partition across x −800..960 at y ≈ −1,500, so the teams can still see each other, with BLU's only way out being the B0 → B1 pad.
 
 ## Traps along the route
 
