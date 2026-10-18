@@ -51,5 +51,7 @@ foreach ($script in @("elevators.nut")) {
 }
 
 Copy-Item "$target.bsp" (Join-Path $game "maps") -Force
+# The compile wipes the cubemaps; this cfg rebuilds them in game with: exec dr_cubemaps
+Copy-Item (Join-Path $PSScriptRoot "dr_cubemaps.cfg") (Join-Path $game "cfg") -Force
 $mins = [math]::Round(((Get-Date) - $started).TotalMinutes, 1)
-Write-Host "`nDone in $mins min. Copied $map.bsp to tf\maps. In TF2: map $map" -ForegroundColor Green
+Write-Host "`nDone in $mins min. Copied $map.bsp to tf\maps. In TF2: map $map, then exec dr_cubemaps" -ForegroundColor Green
