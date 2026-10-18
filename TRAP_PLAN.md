@@ -43,6 +43,28 @@ BLU never walks the RED route. They move between sealed rooms that have windows 
 
 That makes 12 slots: 3–4 in the west wing, 2 at the lobby, 4 in the opera hall and 3 at the top. That's typical for a deathrun of this length. Not every slot needs building before the first playtest.
 
+## Signature trap idea: "Monoliths" (Metal Slug 3)
+
+The owner's original idea, from **Metal Slug 3, Mission 2**. When the Mono Eyes aliens (the mission boss) are beaten, they retreat into a beacon that calls down **monoliths** to crush the player. Just before each one lands, a **laser marks its landing point**. A landed monolith **sinks slowly**, but **shooting it sinks it faster**, so the player has to keep dodging and shooting, or the screen fills up with monoliths.
+
+**The earlier attempt ("MS3", removed 2026-10-18).** It was built by hand in Hammer above the spawn plaza and never finished:
+- One pre-placed `func_tracktrain` "monolith", a 128 × 336 × 752 concrete block with 500 crush damage. It had a vertical `path_track` route: in the sky (z 1,856) → street level (z 320) → underground (z −480) → teleport back to the sky.
+- It dropped at speed 700, then slowed to 50 at street level and sank through the plaza floor.
+- An invisible `func_button` hitbox around it, plus plaza test buttons, started it when shot or pressed. Shooting didn't speed up the sinking.
+- A sealed marble chamber under the plaza let the block pass below ground without a leak.
+- A static blue particle (`bot_recent_teleport_blue`) on the ground stood in for the landing laser.
+- The planned Squirrel side (spawning monoliths, tracking the player's position, the laser, sink-faster-when-shot) was never written; no script existed.
+
+**How to build it now (VScript, no pre-placed trains or pits):**
+- **Hammer:** only a BLU button (`trapNN_button`) and a few `info_target` markers that bound the drop zone over a stretch of RED's route.
+- **Trigger:** BLU presses it. The script picks one living RED in the zone every ~0.8 s, for a few seconds.
+- **Warning:** a red laser (`env_beam` or a sprite column) appears at the player's position for ~0.8 s, plus a warning sound. Players can dodge if they move.
+- **Drop:** spawn a monolith there, high up. It can be a `func_movelinear` copied from a template with `point_template`, or a `prop_dynamic` of a tall slab model with `SetAbsOrigin`/`SetAbsVelocity` in a think. It falls fast and kills on impact with a `trigger_hurt` attached to it (or a `TakeDamage` check on players under it).
+- **After landing:** it becomes a solid obstacle and sinks slowly (a think lowers it a few units per tick). An `OnTakeDamage` hook speeds up the sinking for each hit, so RED can shoot their way through. Each monolith is removed once fully sunk, and everything is removed at round end.
+- **Sinking without a pit:** a sinking entity can pass into the floor and be deleted before it would cross into the void. Brush entities don't cause leaks, so no underground chamber is needed.
+- **Fits best:** a wide room with room to dodge, such as the opera stage or the foyer floor.
+- **Audio:** a Metal Slug-style "incoming" alarm, and an impact thud.
+
 ## Ending
 
 At the moment, RED teleports to the end tower and the round can't end. Suggested finale, the **rooftop showdown**: when the first RED touches `teleport_origin1`, the script also teleports BLU to an arena on the end tower. RED (with weapons) fights BLU, and the round ends when BLU dies or all RED are dead. Another option is to have the end tower give weapons and a path to BLU's last booth.
