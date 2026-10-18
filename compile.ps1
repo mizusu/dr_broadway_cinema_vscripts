@@ -45,7 +45,7 @@ if ($Final) {
 }
 
 # Pack the map's VScripts into the .bsp, so they work without installing them.
-foreach ($script in @("elevators.nut")) {
+foreach ($script in @("elevators.nut", "facade.nut")) {
     Run "bspzip.exe" @("-game", $game, "-addfile", "$target.bsp", "scripts/vscripts/$script", (Join-Path $PSScriptRoot $script), "$target.packed.bsp")
     Move-Item "$target.packed.bsp" "$target.bsp" -Force
 }
