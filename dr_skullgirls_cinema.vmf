@@ -186107,10 +186107,10 @@ entity
 {
 	"id" "68"
 	"classname" "light_environment"
-	"_ambient" "44 44 44 20"
+	"_ambient" "38 46 72 18"
 	"_ambientHDR" "-1 -1 -1 1"
 	"_AmbientScaleHDR" "1"
-	"_light" "247 237 204 200"
+	"_light" "160 180 230 70"
 	"_lightHDR" "-1 -1 -1 1"
 	"_lightscaleHDR" "1"
 	"angles" "0 105 0"
