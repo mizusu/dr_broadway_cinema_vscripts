@@ -61,6 +61,7 @@ Other structures: the tower crown goes up to z 6,592 above the central block; th
 - Script: a `logic_script` named `helloWorldLogicScript` running `hello_world.nut`. The CBS and bot scripts are not yet wired into the map.
 - Multi-kill announcer: ambient_generic entities `sound_blu_doublekill`, `_triplekill`, `_overkill`, `_killtacular`, `_multikill1`, `_multikill2` (4 stacked copies each, using `skullgirls/*.mp3`), triggered only by test buttons.
 - Test entities: `bison_test` (env_explosion), `bison_test_point_hurt` (3 point_hurt), `test_button`, `test_button2`.
+- **Outdoor cleanup (2026-10-18):** at the owner's request, 270 test leftovers were removed. East of the plaza (x 1,150–6,800) the owner had laid out prop catalogs while browsing models: light fixtures, fences, stairs, skybox models, a skyscraper lineup, industrial and train-yard props, and desk and museum clutter. Also removed: a few stray props, 7 test particle systems outdoors, three brush-built chair prototypes, and the shelf the light catalog hung from. **Kept on purpose, owner to confirm:** a 3×4 grid of hanging bulbs at x 1,344–1,440, y −448..−544, z 592 (probably part of an entrance canopy), 4 pipeline silhouettes at x ≈ 6,860, y ≈ 1,300, and a cargo-ship silhouette at (2,016, 576). **Still in the foyer:** 7 more test particle systems at z ≈ 368–432 around x −352..496, y −1,664..−2,160 (`tada_glow_smallcones`, `unusual_aestheticneons_parent`, `fuse_sparks`, `env_grinder_oilspray_cash` and others; `slime_splash_01` doesn't exist in TF2). The owner hasn't decided on these yet.
 
 ## Known bugs to fix first
 
@@ -76,7 +77,7 @@ Other structures: the tower crown goes up to z 6,592 above the central block; th
    - The `light_environment` was daylight (`_light` 247 237 204 200, `_ambient` 44 44 44 20) under the night skybox. At the owner's request (2026-10-18) it's now moonlight: `_light` 160 180 230 70, `_ambient` 38 46 72 18. Its `SunSpreadAngle` is −10, which is odd but was left alone. There is no env_tonemap_controller. 59 lights are at brightness 1,000–10,000 (theater-wing spots at 10,000, opera hall at 2,500), probably on purpose for the tall rooms. Ask the owner before changing any of these.
    - vbsp says the `sky_night_01` skybox faces weren't compiled at the same size and flags, so it can't build the default cubemap.
    - 5 prop_static use physics-only models and are deleted at compile (`furnituretable001a/002a/003a`, `furniture_chair03a`, `controlroom_chair001a`). They should be prop_dynamic or prop_physics.
-   - 5 more need prop_dynamic (`male_01`, `lamppost03a_off_dynamic`, `hwn_spellbook_page`, `hwn_spellbook_incomplete`, `skybox_carosel`).
+   - ~~5 more needed prop_dynamic~~ (`male_01`, `lamppost03a_off_dynamic`, `hwn_spellbook_page`, `hwn_spellbook_incomplete`, `skybox_carosel`). They were test leftovers and were removed in the outdoor cleanup.
    - 14 `hangingbulb` props at y −1120, z ≈ 587 are outside the map.
    - `CUSTOMDEV/DEV_MEASUREGENERIC01RED` (162 faces) isn't installed in TF2.
 
