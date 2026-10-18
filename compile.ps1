@@ -5,7 +5,8 @@
 #   .\compile.ps1 -Final   full-quality lighting, for release
 #
 # The compile runs on a copy in build/, so the repo .vmf is never touched.
-# Custom content is not packed yet (use CompilePal or bspzip for that).
+# The map's VScripts are packed into the .bsp. Other custom content is not
+# packed yet (use CompilePal for that).
 
 param(
     [switch]$Final,
@@ -41,6 +42,12 @@ if ($Final) {
 } else {
     Run "vvis.exe" @("-fast", "-nosort", "-game", $game, $target)
     Run "vrad.exe" @("-fast", "-bounce", "2", "-hdr", "-game", $game, $target)
+}
+
+# Pack the map's VScripts into the .bsp, so they work without installing them.
+foreach ($script in @("elevators.nut")) {
+    Run "bspzip.exe" @("-game", $game, "-addfile", "$target.bsp", "scripts/vscripts/$script", (Join-Path $PSScriptRoot $script), "$target.packed.bsp")
+    Move-Item "$target.packed.bsp" "$target.bsp" -Force
 }
 
 Copy-Item "$target.bsp" (Join-Path $game "maps") -Force
