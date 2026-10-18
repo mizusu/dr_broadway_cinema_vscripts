@@ -123,6 +123,14 @@ Built 2026-10-18 at the owner's request, with creative liberty (no references fo
 - Not possible in VScript: fetching posters/titles from the internet (sandboxed, no HTTP). That would need a SourceMod plugin, and posters could only switch between pre-packed images.
 - Traps: keep Hammer work to named placeholders (brush, button, marker); put the behavior in Squirrel.
 
+## Where we left off (2026-10-18)
+
+- **Waiting on the owner:** in-game screenshots of the forecourt v4 (grand clock housing, flank walls, storefront rows, bulb models, press lights). Fix whatever they show first.
+- **Next, before traps:** an entity-data trimming pass (entdata is at 67% of its cap). Generated entities carry default keyvalues; nearby small lights could be merged; the 24 stacked multi-kill `ambient_generic`s go once the announcer script exists.
+- **Then the agreed plan:** version 1 ends in the opera hall (the hotel floor is version 2). The first milestone is a vertical slice in the grand foyer: seal the BLU balcony, a BLU booth, the trap framework script, a falling-chandelier trap (`foyer_chandelier_1..4` already exist), round-start/K.O. announcers, and random-chance menu music.
+- **Still open:** a "motivator" that kills REDs who stay outside; the 5 furniture props that need prop_dynamic; packing custom content (CompilePal); `hello_world.nut` isn't packed (the map's `helloWorldLogicScript` errors in console until the announcer replaces it).
+- **Working setup:** `compile.ps1` → `map dr_skullgirls_cinema` (cheats, no waiting and a BLU bot come from the auto map cfg) → `exec dr_cubemaps`. The owner keeps TF2 open while working.
+
 ## Suggested order
 
 Fix the theater button target → add spawns and arena logic → compile and test → wire the scripts into the map → multi-kill script → first traps.
