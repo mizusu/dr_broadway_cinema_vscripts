@@ -2,6 +2,8 @@
 
 A TF2 deathrun map with a cinema theme. The map is edited in Hammer++ and versioned in this repo, together with its VScript (Squirrel) code.
 
+**Read [VISION.md](VISION.md) before design work.** It covers the owner's intent: a grand 1920s–30s movie palace (Radio City's Grand Foyer is the first room), dark warm lighting, city views, Skullgirls music by random chance (never looping), and Halo/CvS2 announcers. The owner's reference images and sounds are in `user-ideas/` (about 240 MB, sorted by part of the route). Look at only the files a task needs.
+
 The owner dislikes working in Hammer. Do as much as possible by editing the .vmf text and in VScript, so that Hammer++ is only needed to look over the result and compile.
 
 ## Repo layout
