@@ -617999,6 +617999,2148 @@ entity
 		"logicalpos" "[0 0]"
 	}
 }
+entity
+{
+	"id" "681250"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1104 -2768 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681251"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1872 -2768 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681252"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "2640 -2768 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681253"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "3408 -2768 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681254"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "4176 -2768 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681255"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "4944 -2768 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681256"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "5712 -2768 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681257"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "6480 -2768 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681258"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "3216 -2192 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681259"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1104 -2000 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681260"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1872 -2000 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681261"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "3408 -2000 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681262"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "4176 -2000 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681263"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "4944 -2000 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681264"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "5712 -2000 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681265"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "6480 -2000 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681266"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "2640 -1616 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681267"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1104 -1232 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681268"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1872 -1232 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681269"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "3408 -1232 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681270"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "4176 -1232 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681271"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "4944 -1232 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681272"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "5712 -1232 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681273"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "6480 -1232 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681274"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "3216 -1040 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681275"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "720 -656 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681276"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "2256 -656 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681277"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "720 -464 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681278"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "3408 -464 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681279"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "4560 -464 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681280"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "5328 -464 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681281"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "6096 -464 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681282"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "6864 -464 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681283"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2736 -272 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681284"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1968 -272 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681285"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1200 -272 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681286"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "3024 -272 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681287"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1872 112 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681288"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "912 304 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681289"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "3408 304 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681290"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "4176 304 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681291"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "4944 304 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681292"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "5712 304 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681293"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "6480 304 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681294"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2736 496 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681295"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1968 496 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681296"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "2640 496 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681297"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1488 880 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681298"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "3216 1072 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681299"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "3408 1072 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681300"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "4176 1072 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681301"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "4944 1072 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681302"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "5712 1072 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681303"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "6480 1072 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681304"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2736 1264 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681305"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1968 1264 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681306"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "2256 1264 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681307"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1104 1648 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681308"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1392 1840 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681309"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "2832 1840 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681310"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2736 2032 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681311"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-624 2032 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681312"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "144 2032 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681313"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1872 2032 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681314"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1968 2416 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681315"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "144 2416 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681316"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "912 2416 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681317"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1776 -2768 96"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681318"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2736 -2000 96"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681319"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1968 -2000 96"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681320"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1392 -1424 96"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681321"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2736 -1232 96"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681322"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1968 -848 96"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681323"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2352 -4688 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681324"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2928 -4496 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681325"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2160 -4496 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681326"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-3696 -4304 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681327"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-3888 -3728 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681328"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-3312 -3536 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681329"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2544 -3536 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681330"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1776 -3536 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681331"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1968 -3344 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681332"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-624 -3344 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681333"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2544 -3152 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681334"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1584 -3152 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681335"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1392 -2960 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681336"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-432 -2768 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681337"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "912 -2768 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681338"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "912 -2192 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681339"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-432 -2000 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681340"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "912 -1808 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681341"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-624 -1040 384"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681342"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-3312 -3344 640"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681343"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-816 112 640"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681344"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "720 -1040 688"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681345"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-624 -848 688"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681346"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "144 -656 720"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681347"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2352 -4112 768"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681348"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2544 -3536 768"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681349"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "912 -656 768"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681350"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "336 -4304 784"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681351"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-240 -3920 784"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681352"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "528 -3920 784"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681353"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1392 -3344 800"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681354"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1392 -2576 800"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681355"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1392 -1808 800"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681356"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1104 -2768 832"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681357"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1104 -2000 832"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681358"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1008 -4112 1056"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681359"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "720 -3152 1120"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681360"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "528 -2384 1120"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681361"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "528 -2192 1120"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681362"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2736 -2768 1248"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681363"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-2160 -2192 1248"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681364"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-624 -848 1408"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681365"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "336 -848 1408"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681366"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "912 -2960 1424"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681367"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-624 -1808 1424"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681368"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "528 -1616 1424"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681369"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "144 -3728 1504"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681370"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "144 -656 1504"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681371"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "4560 -272 1888"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681372"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "5328 -80 1888"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681373"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "4368 496 1888"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681374"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "5136 688 1888"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681375"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-816 -2768 1920"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681376"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-816 -2000 1920"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681377"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-816 -1232 1920"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681378"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-624 -848 1920"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681379"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "144 -848 1920"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681380"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "912 -848 1920"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681381"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-240 2224 1920"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681382"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "528 2224 1920"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681383"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-48 1648 2208"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681384"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "720 2032 2208"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681385"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-624 2224 2208"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681386"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-240 -848 2368"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681387"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-432 -848 2816"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681388"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "336 -848 2816"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681389"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "912 -8144 3200"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681390"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1104 -7376 3200"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681391"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1104 -5456 3200"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681392"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-240 -5264 3200"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681393"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "528 -5072 3200"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681394"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-1008 -6416 3248"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681395"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "1104 -7376 3648"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681396"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "144 -4496 3776"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681397"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "-240 -8144 3888"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681398"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "528 -8144 3888"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681399"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "912 -2768 4224"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681400"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "912 -2000 4224"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681401"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "912 -1232 4224"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "681402"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "912 -7184 4928"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
 cameras
 {
 	"activecamera" "-1"
